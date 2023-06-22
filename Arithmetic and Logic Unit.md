@@ -16,7 +16,7 @@ The components that were used to make the arithmetic and logic unit are specifie
 
 ## Working of the ALU
 
-The ALU receives inputs from the computer's registers and carries out the specified operation based on control signals. It performs calculations and produces outputs that can be stored back in the registers or used for further processing.
+The ALU receives inputs from the computer's registers A and B and carries out the specified operation based on control signals. It performs calculations and produces outputs that can be stored back in the registers or used for further processing or can be stored in the RAM location.
 
 By carefully configuring the control signals, the ALU can perform a wide range of operations, making it a versatile component of the computer system. Ben Eater's ALU design is based on a combination of combinatorial logic and sequential logic, ensuring accurate and efficient computation.
 
