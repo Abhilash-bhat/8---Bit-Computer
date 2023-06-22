@@ -6,6 +6,15 @@ The ALU consists of various logic gates and circuits that enable it to execute o
 - Addition
 - Subtraction
 
+## Components Used 
+
+The components that were used to make the arithmetic and logic unit are specified below:
+- 74LS86 Quad XOR gate 
+- 74LS245 Octal bus transceiver 
+- 74LS283 4-bit adder
+
+
+## Working of the ALU
 
 The ALU receives inputs from the computer's registers and carries out the specified operation based on control signals. It performs calculations and produces outputs that can be stored back in the registers or used for further processing.
 
