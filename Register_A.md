@@ -1,5 +1,19 @@
 # Register A
 
+## Table of Contents
+1.  [Module Overview](#module-overview)
+2.  [Components used](#components-used)
+3.  [Schematic](#schematic)
+4.  [Working](#working)
+
+    I.   [Summary of Working](#summary-of-working)
+
+    II.  [Role of IC 74LS245](#role-of-ic-74ls245)
+    
+    III. [Role of IC 74LS245](#role-of-ic-74ls245)
+5.  [Pictures](#pictures)
+6.  [References](#references)
+
 ## Module Overview
 
 Register A is a key component of the 8-bit breadboard computer.
@@ -19,7 +33,7 @@ making it a crucial part of the computer's operations.
 
 **Fig.** ***Register A Schematic*** *(designed on KiCAD, Credits: Ben Eater)* [^3]
  
- ## Working of the Register A
+ ## Working
  
  ### Summary of working 
  
