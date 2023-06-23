@@ -3,7 +3,7 @@
 ## Table of Contents 
 - [Overview](#Overview)
 - [Components used](#Components-Used)
-- [Schematic](#Schematics)
+- [Schematics](#Schematics)
 - [Working](#Working-of-the-ALU)
 - [Difficulties Faced](#Difficulties-Faced)
 - [References](#References)
@@ -25,17 +25,15 @@ The components that were used to make the arithmetic and logic unit are specifie
 
 ## Schematics
 
-The schematics of the ALU is as below
+
 
 <img width="1427" alt="alu" src="https://github.com/Abhilash-bhat/EightBitComputer/assets/80198193/13209e4d-6148-416f-b53f-6015e69ee35f">
+                                                                   
+**Fig.** ***ALU*** *(designed on KiCAD, Credits: Ben Eater)*
 
 ## Working of the ALU
 
-The ALU receives inputs from the computer's registers A and B and carries out the specified operation based on control signals. It performs calculations and produces outputs that can be stored back in the registers or used for further processing or can be stored in the RAM location.
-
-By carefully configuring the control signals, the ALU can perform a wide range of operations, making it a versatile component of the computer system. Ben Eater's ALU design is based on a combination of combinatorial logic and sequential logic, ensuring accurate and efficient computation.
-
-The ALU plays a vital role in enabling the computer to perform arithmetic calculations, logical comparisons, and data manipulation, contributing to the overall functionality of the 8-bit computer.
+The ALU receives inputs from the computer's registers A and B and carries out the specified operation based on control signals. It performs calculations and produces outputs that can be stored back in the registers or used for further processing or can be stored in the RAM location. The ALU design is based on a combination of combinatorial logic and sequential logic, ensuring accurate and efficient computation. The step-by-step working of the ALU is as follows. 
 
 1. The ALU receives inputs from the computer's registers, which hold the operands for the desired operation.
 
@@ -43,21 +41,33 @@ The ALU plays a vital role in enabling the computer to perform arithmetic calcul
 
 3. For arithmetic operations like addition and subtraction, the ALU uses a combination of XOR gates, AND gates, and OR gates to perform the binary arithmetic. The carry-in and carry-out signals are utilized to handle overflow in addition and borrowing in subtraction.
 
-4. Logical operations such as logical AND, logical OR, and bitwise operations are implemented using appropriate combinations of logic gates.
+4. The output of the ALU can be stored back in the registers or used for further processing within the computer system.
+   
+The ALU operates synchronously with the clock signal, ensuring proper timing and synchronization with the rest of the computer's components. The ALU's modular design and combination of logic gates allow for flexibility and expandability, enabling enthusiasts to customize further and extend the ALU's functionality based on specific requirements or project goals such as multiplication with the involvement of flags and some changes in the assembly level code. 
 
-5. For shifting operations, the ALU employs multiplexers to select the desired shift direction (left or right) and the number of shifts.
+1. The ALU receives two 8-bit binary numbers as inputs, typically from the computer's registers. These numbers represent the operands for the addition operation.
 
-6. The ALU performs the specified operation on the inputs and generates the result.
+2. The ALU performs the addition using a combination of XOR gates, AND gates, and OR gates. These logic gates are interconnected to implement the binary addition algorithm.
 
-7. Depending on the operation and the control signals, the ALU may also produce additional outputs such as carry-out signals, overflow flags, or zero flags to indicate specific conditions or results.
+3. The bits of the two input numbers are processed simultaneously, starting from the least significant bit (LSB) to the most significant bit (MSB).
 
-8. The output of the ALU can be stored back in the registers or used for further processing within the computer system.
+4. At each bit position, the XOR gate calculates the sum of the corresponding bits of the input numbers. This sum represents the current bit of the result.
 
-9. The ALU operates synchronously with the clock signal, ensuring proper timing and synchronization with the rest of the computer's components.
+5. The AND gate generates a carry-out signal if both input bits are set (equal to 1), indicating a carry-over to the next bit position.
 
-10. By configuring the control signals appropriately, the ALU can perform a wide range of arithmetic and logical operations, providing versatility and computational capabilities to the 8-bit computer.
+6. The OR gate produces a carry-in signal, which is received from the previous bit's carry-out signal.
 
-11. The ALU's modular design and combination of logic gates allow for flexibility and expandability, enabling enthusiasts to further customize and extend the ALU's functionality based on specific requirements or project goals.
+7. The carry-in signal and the carry-out signal are used to handle carry propagation across multiple bit positions during addition. They ensure that the addition is correctly performed, taking into account any carry-over from lower bits.
+
+8. The result of each bit addition, along with the carry-out signal from the most significant bit, forms the final 8-bit sum.
+
+9. The carry-out signal can be used to detect overflow in case the addition results in a value larger than what can be represented with 8 bits.
+
+10. The ALU generates the sum as its output, which can be stored back in registers or used for further processing within the computer system.
+
+By utilizing this combination of logic gates and carry signals, the ALU performs binary addition efficiently and accurately. The modular design of the ALU allows for the addition operation to be integrated with other arithmetic and logical operations, providing a versatile computing capability to Ben Eater's 8-bit computer.
+
+
 
 
 
