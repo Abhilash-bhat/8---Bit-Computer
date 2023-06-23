@@ -1,5 +1,15 @@
 # ALU (Arithmetic and Logic Unit)
 
+## Table of Contents 
+- [Overview](#Overview)
+- [Components used](#Components-Used)
+- [Schematic](#Schematics)
+- [Working](#Working-of-the-ALU)
+- [Difficulties Faced](#Difficulties-Faced)
+- [References](#References)
+
+## Overview
+
 The **ALU**  in the 8-bit computer is a crucial component responsible for performing arithmetic and logical operations. It is designed to operate on **8-bit** binary data.
 
 The ALU consists of various logic gates and circuits that enable it to execute operations such as:
@@ -13,6 +23,11 @@ The components that were used to make the arithmetic and logic unit are specifie
 - 74LS245 Octal bus transceiver 
 - 74LS283 4-bit adder
 
+## Schematics
+
+The schematics of the ALU is as below
+
+<img width="1427" alt="alu" src="https://github.com/Abhilash-bhat/EightBitComputer/assets/80198193/13209e4d-6148-416f-b53f-6015e69ee35f">
 
 ## Working of the ALU
 
