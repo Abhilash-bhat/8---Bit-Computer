@@ -6,10 +6,13 @@
 2. [Components](#components)
 3. [Schematics](#schematics)
 4. [Insights](#insights)
+   
    1. [Working](#working)
-   2. [IC 74LS157](#ic-74ls157)
-   3. [IC 74LS173](#ic-74ls173)
-5. [References](#references)
+   
+   3. [IC 74LS157](#ic-74ls157)
+      
+   5. [IC 74LS173](#ic-74ls173)
+6. [References](#references)
 
 ## Module Overview
 
