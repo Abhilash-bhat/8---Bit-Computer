@@ -94,7 +94,12 @@ Pin 4,7,9 and 12 are given to RAM address inputs. A set of LEDs connected to the
 * [Ben Eater's Channel](https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU)
 
 [^1] : [need to be changed](#module-overview)
+
 [^2] : [Data Sheet 74LS173](https://eater.net/datasheets/74ls173.pdf)
+
 [^3] : [Data Sheet 74LS157](https://eater.net/datasheets/74ls157.pdf)
+
 [^4] : [Ben Eater's Website](https://eater.net/)
+
 [^5] : [need to be changed2](#module-overview)
+
