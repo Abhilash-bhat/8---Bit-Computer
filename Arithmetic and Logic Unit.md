@@ -6,7 +6,7 @@
 - [Schematics](#Schematics)
 - [Working](#Working-of-the-ALU)
     1. [How addition works](#How-the-addition-actually-works)
-    2. [How subtraction works](How-the-subtraction-actually-works)
+    2. [How subtraction works](#How-the-subtraction-actually-works)
 - [Images](#Images)
 - [References](#References)
 
