@@ -5,6 +5,8 @@
 - [Components used](#Components-Used)
 - [Schematics](#Schematics)
 - [Working](#Working-of-the-ALU)
+    1. [How addition works](#How-the-addition-actually-works)
+    2. [How subtraction works](How-the-subtraction-actually-works)
 - [Images](#Images)
 - [References](#References)
 
@@ -72,16 +74,13 @@ For this operation, the XOR gates (IC7486) and the 4-bit adder (IC74283) are use
 
 ## Images
 
-
-
-
-  
 ![ALU](https://github.com/Abhilash-bhat/EightBitComputer/assets/80198193/369de57d-d5b0-4e57-bd4d-c072fecab275)
+
 
 
 ## References 
 
 
-
+* [Ben Eater's Channel](https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU)
 
 
