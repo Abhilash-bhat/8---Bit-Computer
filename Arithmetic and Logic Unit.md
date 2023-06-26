@@ -82,5 +82,6 @@ For this operation, the XOR gates (IC7486) and the 4-bit adder (IC74283) are use
 
 
 * [Ben Eater's Channel](https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU)
+* [Ben Eater's Wenbsite ](https://eater.net/8bit/alu)
 
 
