@@ -100,6 +100,6 @@ Where even if there are multiple debouncing only one output pulse would be obtai
 
 
 * [Ben Eater's Channel](https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU)
-* [Ben Eater's Wenbsite ](https://eater.net/8bit/alu)
+* [Ben Eater's Website ](https://eater.net/8bit/alu)
 
  
