@@ -28,6 +28,8 @@ The main purpose of the RAM module is to efficiently handle data and instruction
 ## Schematics
 <img width="1409" alt="ram" src="https://github.com/Abhilash-bhat/EightBitComputer/assets/80198193/6adecb4d-fd7d-4665-890c-eed181bc1492">
 
+**Fig.** ***RAM*** *(designed on KiCAD, Credits: Ben Eater)*
+
 
 ## Working of the RAM
 
@@ -76,3 +78,32 @@ The 74189 IC expands memory capacity in the 8-bit computer by adding 64-bit RAM 
 The 74LS245 IC is an 8-bit bidirectional bus transceiver used to enable data transfer between the computer's internal bus and external devices. It facilitates data exchange with peripherals and memory units outside the CPU.
 
 Each of these ICs plays a specific role in the overall functioning of the computer, contributing to data processing, memory management, and communication within the system.
+
+### Programming the RAM
+
+Programming the 8-bit computer RAM in manual mode involves the following steps:
+
+1. **Set Up the Computer**: Ensure the 8-bit computer is powered on and the RAM module is properly connected to the CPU and other components. The dip switches on the RAM module should be accessible.
+
+2. **Address Selection**: Use the dip switches to manually set the memory address you want to program in the Memory Address Register. Each dip switch represents a bit in the address, allowing you to select the specific memory location.
+
+3. **Opcode Input**: Set the dip switches to represent the opcode (operation code) you want to store in the selected memory location. The opcode corresponds to the instruction you want the computer to execute.
+
+4. **Data Input**: If the opcode requires additional data (e.g., operands or constants), set the dip switches accordingly to represent the data to be stored along with the opcode.
+
+5. **Write Operation**: Once you have set the address, opcode, and data (if required), initiate a write operation. This can be done by pressing a "write" button or using a manual control signal to signal the CPU to write the data into the specified memory location.
+
+6. **Verification**: After the write operation, verify that the data has been successfully written to the intended memory address. You can do this by reading the data back from the same address and comparing it with the original data you input using the dip switches.
+
+7. **Repeat Steps**: To continue programming the RAM with additional instructions or data, repeat the above steps, selecting different memory addresses and inputting the corresponding opcodes and data as needed.
+
+
+## Images
+![RAM](https://github.com/Abhilash-bhat/EightBitComputer/assets/80198193/f6fcccb5-3697-45ed-a91a-567315c3a5b1)
+
+## References 
+
+* [Ben Eater's Channel](https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU)
+* [Ben Eater's Wenbsite ](https://eater.net/8bit/alu)
+
+
