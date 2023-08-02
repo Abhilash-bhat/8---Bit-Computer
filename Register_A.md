@@ -85,7 +85,9 @@ The clock input would be connected to the computer's clock signal, synchronizing
 
 ## Pictures
 
+![Register A](https://github.com/Abhilash-bhat/EightBitComputer/assets/78137287/4e143f03-09fd-48f6-86e7-11d0cd91eddc)
 
+**Fig.** ***Register A***
 
 ## References
 
