@@ -8,91 +8,89 @@
 
     I.   [Summary of Working](#summary-of-working)
 
-    II.  [Role of IC 74LS245](#role-of-ic-74ls245)
+    II.  [Role of IC 74HC595](#role-of-ic-74hc595)
     
-    III. [Role of IC 74LS245](#role-of-ic-74ls245)
-5.  [Pictures](#pictures)
-6.  [References](#references)
+    III. [Role of IC AT28C16](#role-of-ic-at28c16)
+
+    IV.  [Role of IC Arduino Nano](#role-of-arduino-nano)
+6.  [Pictures](#pictures)
+7.  [References](#references)
 
 ## Module Overview
 
-Register A is a key component of the 8-bit breadboard computer.
-It is an 8-bit register, meaning it can hold an 8-bit binary value and output the data held.
-It's like the computer's "short-term memory," holding data that the computer is currently working with, 
-making it a crucial part of the computer's operations.
+In the 8-bit computer, the EEPROM programmer plays a crucial role in programming the EEPROM (Electrically Erasable Programmable Read-Only Memory) chip. The EEPROM is used to store the computer's microcode, which is a set of instructions that control the computer's operations.
+
+The EEPROM programmer allows us to write the microcode instructions onto the EEPROM chip, effectively customizing the computer's behavior and enabling it to perform specific tasks. By programming the EEPROM, Ben can make changes to the computer's instruction set and implement different functionalities within the constraints of the hardware design.
 
  ## Components used
  
- * **IC 74LS173** : 4-Bit D-Type Registers With 3-State Outputs [^1]
- * **IC 74LS245** : 3-State Octal Bus Transceiver [^2]
+ * **IC 74HC595** : 8-Bit Shift Registers With 3-State Outputs [^1]
+ * **IC AT28C16** : 16K (2K x 8) Parallel EEPROMs [^2]
+ * **Arduino Nano** : Microcontroller to program the EEPROM [^3]
+
 
 ## Schematic
 
-![Register_A_Schematic](https://eater.net/schematics/a-register.png)
+![EEPROM Programmer_Schematic](https://github.com/beneater/eeprom-programmer/blob/master/schematic.png)
 
 
-**Fig.** ***Register A Schematic*** *(designed on KiCAD, Credits: Ben Eater)* [^3]
+**Fig.** ***EEPROM Programmer Schematic*** *(designed on KiCAD, Credits: Ben Eater)* [^4]
  
  ## Working
  
  ### Summary of working 
  
-* One of the components of the computer is the register A, which is an 8-bit register that can store and output data. 
-* The register A uses a 74LS173 chip, which is a 4-bit D register that can be enabled or disabled by a control signal. 
-* The register A also uses a 74LS245 chip, which is an octal bus transceiver that can transfer data between two buses. 
-* The register A has a load pin that allows it to store data from the bus, and an enable pin that allows it to output data to the bus. 
-* These flip-flops are connected to a common bus, which allows them to receive data from other parts of the computer. 
-This bus system is a fundamental part of the computer's architecture, enabling communication between different components.
-* These control lines can instruct the register to load data from the bus, output its data onto the bus, or perform other operations.
-* The register A has eight red LEDs that indicate the stored data.
+The EEPROM programmer in 8-bit computer is designed to write data onto the EEPROM chip. The process involves the following steps:
 
-### Role of IC 74LS245
+* **Prepare the EEPROM:** The first step is to insert the EEPROM chip into the breadboard on the programmer. The breadboard holds the chip in place without damaging the pins.
 
-* The 74LS245 is an octal bus transceiver, which means it can transmit data in both directions on an 8-bit bus. 
-It's used in the A register (and other registers) to control whether the register is outputting its data onto the bus or not.
+* **Load Data:** The microcode or data that needs to be written onto the EEPROM is loaded into the programmer. This data typically contains the instructions that define the computer's behavior.
 
-* The 74LS245 has a direction pin (DIR) and an output enable pin (OE). 
-When the OE pin is low, the transceiver is enabled, and the direction of data flow is determined by the DIR pin. 
-If DIR is high, data flows from the A side (pins A1-A8) to the B side (pins B1-B8).  
-If DIR is low, data flows from the B side to the A side.
+* **Start Programming:** The programming process is initiated by pressing the relevant button or activating the programming sequence.
 
-* In the context of the A register, the 74LS245 is used to control when the register's data is put onto the bus. 
-When the register's output control signal is activated (low), the 74LS245's OE pin is set low, 
-enabling the transceiver and allowing the data stored in the register to be put onto the bus. 
-When the output control signal is not activated (high), the OE pin is set high, 
-disabling the transceiver and  isolating the register's data from the bus. 
-This ability to control when a register outputs its data onto the bus is crucial in a computer system, 
-as it allows different components to use the bus at different times without interfering with each other.
+* **Microcontroller Controls Write Process:** The microcontroller in the programmer takes over and starts the actual write process. It sends the data to the EEPROM chip one byte at a time in the correct sequence.
 
-### Role of IC 74LS173
+* **Write to EEPROM:** The microcontroller writes the data to the EEPROM's memory cells by applying specific voltage levels to the chip's pins. These voltage levels represent the binary data being programmed into the EEPROM.
 
-* The 74LS173 is a 4-bit D-type register. It's used for storing data temporarily within a digital circuit. 
-*In the context of Register A, it's used to hold the data that the register is currently working with.
+* **Verify Data:** After writing each byte, the programmer may read back the data from the EEPROM to verify that it was written correctly. This verification ensures that the data is stored accurately and reliably.
 
-* The 74LS173 has four data input lines (D0-D3), four output lines (Q0-Q3), two control lines for output enable (OE1 and OE2), 
-and a clock input (CP). When the clock input receives a rising edge (transition from low to high), 
-the data present on the D0-D3 inputs is latched into the register and held there until the next rising edge of the clock.
-The output enable lines are used to control whether the contents of the register are output onto the Q0-Q3 lines. 
-When both OE1 and OE2 are low, the outputs are enabled and the data in the register is output. 
-When either OE1 or OE2 is high, the outputs are disabled and the Q0-Q3 lines are in a high impedance state, 
-effectively disconnecting the register from whatever it's connected to.
+* **End of Programming:** Once all the data is written and verified, the programmer signals that the programming process is complete, and the EEPROM is now programmed with the desired microcode or data.
 
-* In the context of Register A, two 74LS173 chips would be used to create an 8-bit register. 
-The data inputs would be connected to the data bus, allowing the register to receive data from other parts of the computer. 
-The output enable lines would be controlled by the computer's control logic, allowing it to control 
-when the register outputs its data onto the bus. 
-The clock input would be connected to the computer's clock signal, synchronizing the register's operations with the rest of the computer
+
+### Role of IC 74HC595
+
+* The 74595 IC is a type of shift register that can convert serial data into parallel data or vice versa. The Arduino does not have enough pins to directly control all of the address, data, and control lines of the EEPROM chip, so it uses two 74595 ICs to shift out the address and output enable signals serially and then latch them into parallel outputs. This way, the Arduino can send commands and data to the EEPROM chip using only a few wires.
+
+* The 74595 IC has eight parallel outputs (Q0 to Q7) that can be connected to the address, data, and control lines of the EEPROM chip. The 74595 IC also has a serial input (DS) and a serial output (Q7S) that can be connected to the Arduino. The 74595 IC also has three control pins: a shift register clock (SH_CP), a storage register clock (ST_CP), and an output enable (OE).
+
+* The Arduino can send data to the 74595 IC by setting the DS pin to either high or low, and then pulsing the SH_CP pin. This will shift the bit into the shift register, and move the previous bits one position to the right. The Arduino can repeat this process until it sends eight bits to the 74595 IC. The Arduino can also receive data from the 74595 IC by reading the Q7S pin, and then pulsing the SH_CP pin. This will shift the bit out of the shift register, and move the next bits one position to the left. The Arduino can repeat this process until it receives eight bits from the 74595 IC.
+
+* The Arduino can also transfer the data from the shift register to the storage register by pulsing the ST_CP pin. This will latch the data into the parallel outputs, and make them available for the EEPROM chip. The Arduino can also enable or disable the parallel outputs by setting the OE pin to either low or high, respectively.
+
+### Role of IC AT28C16
+* The role of the AT28C16 in the EEPROM programmer in the 8-bit computer by Ben Eater is to store the microcode that defines the instruction set of the CPU. The microcode is a set of binary patterns that control the signals sent to the different components of the CPU, such as the registers, the ALU, and the control unit. By programming the AT28C16 with different microcode, the programmer can change the behavior and functionality of the CPU. For example, the programmer can add new instructions, modify existing ones, or implement conditional logic .
+
+* The AT28C16 is a type of EEPROM (electrically erasable programmable read-only memory) chip that can store 16K (2K x 8) bits of data. The AT28C16 is accessed like a static RAM for read and write operations. During a byte write, the address and data are latched internally. Following the initiation of a write cycle, the device will go to a busy state and automatically write the latched data using an internal control timer. The device provides two methods for detecting the end of a write cycle: the RDY/BUSY output and DATA POLLING of I/O7 .
+
+### Role of Arduino Nano
+
+* The role of the Arduino Nano in the EEPROM programmer in the 8-bit computer by Ben Eater is to control the programming process of the EEPROM chip using a serial protocol. The Arduino Nano is a small, complete, and breadboard-friendly board based on the ATmega328P microcontroller. It has more or less the same functionality of the Arduino Uno board, but in a smaller form factor.
+
+* The Arduino Nano is connected to the EEPROM chip and two 74595 ICs using a few wires. The 74595 ICs are shift registers that can convert serial data into parallel data or vice versa4. The Arduino Nano uses the 74595 ICs to send the address and output enable signals to the EEPROM chip serially, and then latch them into parallel outputs. This way, the Arduino Nano can send commands and data to the EEPROM chip using only a few wires.
+
+* The EEPROM chip stores the microcode that defines the instruction set of the CPU, which is a set of binary patterns that control the signals sent to the different components of the CPU, such as the registers, the ALU, and the control unit4 . By programming the EEPROM chip with different microcode, the programmer can change the behavior and functionality of the CPU. For example, the programmer can add new instructions, modify existing ones, or implement conditional logic.
 
 ## Pictures
 
 
-
 ## References
 
-[^1]: [Data Sheet 74LS173](https://eater.net/datasheets/74ls173.pdf)
+[^1]: [Data Sheet 74HC595](https://www.sparkfun.com/datasheets/IC/SN74HC595.pdf)
 
-[^2]: [Data Sheet 74LS245](https://eater.net/datasheets/74ls245.pdf)
+[^2]: [Data Sheet AT28C16](https://eater.net/datasheets/28c16.pdf)
 
-[^3]: [Ben Eater's Website](https://eater.net/8bit)
+[^3]: [Arduino Nano Documentation](https://docs.arduino.cc/hardware/nano)
+
+[^4]: [Ben Eater's Website](https://eater.net/8bit)
 
 * [Ben Eater's Channel](https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU)
