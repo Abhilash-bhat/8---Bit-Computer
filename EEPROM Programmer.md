@@ -81,7 +81,9 @@ The EEPROM programmer in 8-bit computer is designed to write data onto the EEPRO
 * The EEPROM chip stores the microcode that defines the instruction set of the CPU, which is a set of binary patterns that control the signals sent to the different components of the CPU, such as the registers, the ALU, and the control unit4 . By programming the EEPROM chip with different microcode, the programmer can change the behavior and functionality of the CPU. For example, the programmer can add new instructions, modify existing ones, or implement conditional logic.
 
 ## Pictures
+![EEPROM Programmer](https://github.com/Abhilash-bhat/EightBitComputer/assets/78137287/592723a4-53e5-40fc-b59b-fe7949d65bc9)
 
+**Fig.** ***EEPROM Programmer*** 
 
 ## References
 
