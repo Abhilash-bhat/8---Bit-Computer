@@ -22,12 +22,12 @@ Similar to any register, the Output Register stores the binary value present on 
 
 ## Components Used
 
-- **IC 555 Timer** [^1]
-- **IC 74LS273** : 8-bit D Register [^2]
-- **IC AT28C16** : 16k EEPROM [^3]
-- **IC 74LS76** : Dual JK FlipFlop [^4]
-- **IC 74LS139** : Dual 2-to-4 line decoder/demultiplexer [^5]
-- **IC  74LS08** : Quad AND Gate [^6]
+- **IC 555 Timer**[^1]
+- **IC 74LS273** : 8-bit D Register[^2]
+- **IC AT28C16** : 16k EEPROM[^3]
+- **IC 74LS76** : Dual JK FlipFlop[^4]
+- **IC 74LS139** : Dual 2-to-4 line decoder/demultiplexer[^5]
+- **IC  74LS08** : Quad AND Gate[^6]
 - **Common Cathode 7 segment display** (7segment_CC x4)
 - **SPDT Switch**
 - **Resistors** : 1k ohm, 100k ohm, 10k ohm
@@ -37,7 +37,7 @@ Similar to any register, the Output Register stores the binary value present on 
 
 ![OUTPUT REGISTER_Schematics](https://eater.net/schematics/output.png)
 
-**Fig.** ***OUTPUT REGISTER Schematic*** *(designed on KiCAD, Credits: Ben Eater)* [^7]
+**Fig.** ***OUTPUT REGISTER Schematic*** *(designed on KiCAD, Credits: Ben Eater)*[^7]
 
 ## Insights
 
