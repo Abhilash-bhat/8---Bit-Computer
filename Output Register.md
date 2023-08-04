@@ -69,7 +69,8 @@ IC 2816 is a 16k EEPROM (Electrically Erasable Programmable Read Only Memory). I
 
 ## Images
 
-![Output_Register Image]()
+![Output_Register Image](https://github.com/Abhilash-bhat/EightBitComputer/assets/78137287/48a58ed5-21ec-42b4-8e81-35587681049c)
+
 
 **Fig.** ***Output Register***
 
