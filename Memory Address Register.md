@@ -100,12 +100,12 @@ Pin 4,7,9 and 12 are given to RAM address inputs. A set of LEDs connected to the
 
 [^1]: [RAM Module](https://github.com/Abhilash-bhat/EightBitComputer/blob/main/Random%20Access%20Memory.md)
 
-[^4]: [Data Sheet 74LS173](https://eater.net/datasheets/74ls173.pdf)
-
-[^5]: [Data Sheet 74LS157](https://eater.net/datasheets/74ls157.pdf)
-
 [^2]: [Ben Eater's Website](https://eater.net/8bit)
 
 [^3]: [Program Counter Module](https://github.com/Abhilash-bhat/EightBitComputer/blob/main/Program%20Counter.md)
+
+[^4]: [Data Sheet 74LS173](https://eater.net/datasheets/74ls173.pdf)
+
+[^5]: [Data Sheet 74LS157](https://eater.net/datasheets/74ls157.pdf)
 
 * [Ben Eater's Channel](https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU)
