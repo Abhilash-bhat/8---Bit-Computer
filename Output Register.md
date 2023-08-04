@@ -22,12 +22,12 @@ Similar to any register, the Output Register stores the binary value present on 
 
 ## Components Used
 
-- **IC 555 Timer**
-- **IC 74LS273** : 8-bit D Register
-- **IC AT28C16** : 16k EEPROM
-- **IC 74LS76** : Dual JK FlipFlop
-- **IC 74LS139** : Dual 2-to-4 line decoder/demultiplexer
-- **IC  74LS08** : Quad AND Gate
+- **IC 555 Timer** [^1]
+- **IC 74LS273** : 8-bit D Register [^2]
+- **IC AT28C16** : 16k EEPROM [^3]
+- **IC 74LS76** : Dual JK FlipFlop [^4]
+- **IC 74LS139** : Dual 2-to-4 line decoder/demultiplexer [^5]
+- **IC  74LS08** : Quad AND Gate [^6]
 - **Common Cathode 7 segment display** (7segment_CC x4)
 - **SPDT Switch**
 - **Resistors** : 1k ohm, 100k ohm, 10k ohm
@@ -37,7 +37,7 @@ Similar to any register, the Output Register stores the binary value present on 
 
 ![OUTPUT REGISTER_Schematics](https://eater.net/schematics/output.png)
 
-**Fig.** ***OUTPUT REGISTER Schematic*** *(designed on KiCAD, Credits: Ben Eater)*[^4]
+**Fig.** ***OUTPUT REGISTER Schematic*** *(designed on KiCAD, Credits: Ben Eater)* [^7]
 
 ## Insights
 
@@ -76,3 +76,19 @@ IC 2816 is a 16k EEPROM (Electrically Erasable Programmable Read Only Memory). I
 
 ## References
 
+[^1]: [Data Sheet 555 Timer IC](https://eater.net/datasheets/lm555.pdf)
+
+[^2]: [Data Sheet 74LS273](https://eater.net/datasheets/74ls273.pdf)
+
+[^3]: [Data Sheet AT28C16](https://eater.net/datasheets/28c16.pdf)
+
+[^4]: [Data Sheet 74LS76](https://eater.net/datasheets/74ls107.pdf)
+
+[^5]: [Data Sheet 74LS139](https://eater.net/datasheets/74ls139.pdf)
+ 
+[^6]: [Data Sheet 74LS08](https://eater.net/datasheets/74ls08.pdf)
+
+[^7]: [Ben Eater's Website](https://eater.net/8bit)
+
+Note:IC 74LS76 is same as IC 74LS107.(Watch out for the Pins!)
+* [Ben Eater's Channel](https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU)
