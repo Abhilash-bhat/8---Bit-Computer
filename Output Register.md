@@ -70,7 +70,7 @@ IC 2816 is a 16k EEPROM (Electrically Erasable Programmable Read Only Memory). I
 - Whenever an user wants decimal representation of the binary values, the OI control signal (Output In) is made HIGH. Then, in the next clock pulse, the 8-bit binary value from the bus gets stored into D Register.
 - The 8-bit value is directly connected to 8 address lines of EEPROM. Based on the data stored in the 2k address locations, the EEPROM reads the data of the address pointed on its address lines.
 - The next 2 address lines are connected to the JK FF-counter. The counter along with the data, decode the binary value into signals that configure the 7segment display to show decimal value corresponding to the binary value.
-- The EEPROM is programmed through an Arduino. The code is available at **Output_Register_Code.ino**. [^8]
+- The EEPROM is programmed through an Arduino. The code is available at **Output_Register_Code.ino**.[^8]
 - The JK FF is given an on-module high frequency square wave as clock. This high frequency signal is obtained by an astable multivibrator circuit, built with a 555 Timer IC.
 - A demultiplexer, decodes the counter signlas into 4 distinct signals, such that for each count, only one of the 4 displays are enabled.
 - Since the frequency is very high, human eye cannot differentiate the pulsing of values.
@@ -103,5 +103,6 @@ IC 2816 is a 16k EEPROM (Electrically Erasable Programmable Read Only Memory). I
 
 [^8]: [Output_Register_Code ](https://github.com/Abhilash-bhat/EightBitComputer/blob/main/Output_Register_Code.ino)
 
-Note:IC 74LS76 is same as IC 74LS107.(Watch out for the Pins!)
 * [Ben Eater's Channel](https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU)
+
+Note:IC 74LS76 is same as IC 74LS107.(Watch out for the Pins!)
