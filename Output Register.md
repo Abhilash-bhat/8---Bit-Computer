@@ -67,6 +67,17 @@ IC 2816 is a 16k EEPROM (Electrically Erasable Programmable Read Only Memory). I
 
 ## Working
 
+- Whenever an user wants decimal representation of the binary values, the OI control signal (Output In) is made HIGH. Then, in the next clock pulse, the 8-bit binary value from the bus gets stored into D Register.
+- The 8-bit value is directly connected to 8 address lines of EEPROM. Based on the data stored in the 2k address locations, the EEPROM reads the data of the address pointed on its address lines.
+- The next 2 address lines are connected to the JK FF-counter. The counter along with the data, decode the binary value into signals that configure the 7segment display to show decimal value corresponding to the binary value.
+- The EEPROM is programmed through an Arduino. The code is available at **Output_Register_Code.ino**. [^8]
+- The JK FF is given an on-module high frequency square wave as clock. This high frequency signal is obtained by an astable multivibrator circuit, built with a 555 Timer IC.
+- A demultiplexer, decodes the counter signlas into 4 distinct signals, such that for each count, only one of the 4 displays are enabled.
+- Since the frequency is very high, human eye cannot differentiate the pulsing of values.
+- For positive only computations, we obtain values between 0 and 255.
+- For general computations, we get values between -128 and 127.(2's complement method)
+- The last address line of EEPROM makes this difference, for only positive or general computatuion. A simple SPDT switch determines the computation capabilities.
+
 ## Images
 
 ![Output_Register Image](https://github.com/Abhilash-bhat/EightBitComputer/assets/78137287/48a58ed5-21ec-42b4-8e81-35587681049c)
@@ -89,6 +100,8 @@ IC 2816 is a 16k EEPROM (Electrically Erasable Programmable Read Only Memory). I
 [^6]: [Data Sheet 74LS08](https://eater.net/datasheets/74ls08.pdf)
 
 [^7]: [Ben Eater's Website](https://eater.net/8bit)
+
+[^8]: [Output_Register_Code ](https://github.com/Abhilash-bhat/EightBitComputer/blob/main/Output_Register_Code.ino)
 
 Note:IC 74LS76 is same as IC 74LS107.(Watch out for the Pins!)
 * [Ben Eater's Channel](https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU)
