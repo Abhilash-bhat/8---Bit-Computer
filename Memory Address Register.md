@@ -12,6 +12,7 @@
    3. [IC 74LS173](#ic-74ls173)
       
    5. [IC 74LS157](#ic-74ls157)
+5. [Images](#images)
 6. [References](#references)
 
 ## Module Overview
@@ -88,6 +89,12 @@ Pin 2,5,14 and 11 are inputs from DIP switches with Pin 2 as MSB amd Pin 11 as L
 Pin 3,6,13 and 10 are inputs from IC 74173 with Pin 3 as MSB amd Pin 10 as LSB ,following the order as stated.
 Pin 15 is grounded, as we want MUX to be enabled all the time. Pin 8 is given to ground and Pin 16 is fed with Vcc.
 Pin 4,7,9 and 12 are given to RAM address inputs. A set of LEDs connected to these pins enable us to read the data in MAR.
+
+## Images
+
+![MAR](https://github.com/Abhilash-bhat/EightBitComputer/assets/78137287/ac9a3df8-44d2-494f-ad8f-b8ccaf32dc62)
+
+
 
 ## References
 
