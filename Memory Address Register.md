@@ -22,8 +22,8 @@ It is the basic block, through which data can be given to the computer for compu
  
 ## Components
 
-- **IC 74LS173** : 4-Bit D-type registers with 3-state Outputs. [^4]
-- **IC 74LS157** : Quad 2-line to 1-line data multiplexers/selectors. [^5]
+- **IC 74LS173** : 4-Bit D-type registers with 3-state Outputs. [^2]
+- **IC 74LS157** : Quad 2-line to 1-line data multiplexers/selectors. [^3]
 - **4-position DIP Switch**
 - **SPDT Switch**
 - **Resistors** : 4x 220 ohm (Note: Only to limit current across LEDs.)
@@ -33,7 +33,7 @@ It is the basic block, through which data can be given to the computer for compu
 
 ![MAR_Schematics](https://eater.net/schematics/mar.png)
 
-**Fig.** ***MAR Schematic*** *(designed on KiCAD, Credits: Ben Eater)* [^2]
+**Fig.** ***MAR Schematic*** *(designed on KiCAD, Credits: Ben Eater)* [^4]
 
 ## Insights
 
@@ -100,11 +100,11 @@ Pin 4,7,9 and 12 are given to RAM address inputs. A set of LEDs connected to the
 
 [^1]: [RAM Module](https://github.com/Abhilash-bhat/EightBitComputer/blob/main/Random%20Access%20Memory.md)
 
-[^2]: [Ben Eater's Website](https://eater.net/8bit)
+[^4]: [Ben Eater's Website](https://eater.net/8bit)
 
-[^3]: [Program Counter Module](https://github.com/Abhilash-bhat/EightBitComputer/blob/main/Program%20Counter.md)
+[^2]: [Program Counter Module](https://github.com/Abhilash-bhat/EightBitComputer/blob/main/Program%20Counter.md)
 
-[^4]: [Data Sheet 74LS173](https://eater.net/datasheets/74ls173.pdf)
+[^3]: [Data Sheet 74LS173](https://eater.net/datasheets/74ls173.pdf)
 
 [^5]: [Data Sheet 74LS157](https://eater.net/datasheets/74ls157.pdf)
 
