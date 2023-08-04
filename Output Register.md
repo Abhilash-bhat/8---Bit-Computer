@@ -63,7 +63,7 @@ IC 7408 is a quad AND gate. It is used as a gate ,for the entry of bus value int
 
 ### IC AT28C16
 
-IC 2816 is a 16k EEPROM (Electrically Erasable Programmable Read Only Memory). It contains 16k address locations in which data can be stored. Since it is a ROM, data is permanantly stored. i.e. unlike RAM, ROM doesn't loose the data when the power goes off. Its electrically erasable, and programmable, hence data in any address can be erased and reprogrammed with a new data.
+IC 2816 is a 16k EEPROM (Electrically Erasable Programmable Read Only Memory). It contains 2k address locations in which 8-bit data can be stored. Since it is a ROM, data is permanantly stored. i.e. unlike RAM, ROM doesn't loose the data when the power goes off. Its electrically erasable, and programmable, hence data in any address can be erased and reprogrammed with a new data.
 
 ## Working
 
