@@ -17,13 +17,13 @@
 
 ## Module Overview
 
-MAR is a simple 4-bit register, that holds/points to a RAM[^1] location. 
+MAR is a simple 4-bit register, that holds/points to a RAM location. [^1]
 It is the basic block, through which data can be given to the computer for computations. It guides through the complete sequence of operations, without which the computer cannot compute at all.
  
 ## Components
 
-- **IC 74LS173** : 4-Bit D-type registers with 3-state Outputs.
-- **IC 74LS157** : Quad 2-line to 1-line data multiplexers/selectors.
+- **IC 74LS173** : 4-Bit D-type registers with 3-state Outputs. [^4]
+- **IC 74LS157** : Quad 2-line to 1-line data multiplexers/selectors. [^5]
 - **4-position DIP Switch**
 - **SPDT Switch**
 - **Resistors** : 4x 220 ohm (Note: Only to limit current across LEDs.)
@@ -56,9 +56,9 @@ After initialising the computer, the computer now goes into automatic mode, wher
 
 (Note: In this mode, the DIP switches have no control over MAR value.) 
 
-### IC 74LS173  
+### IC 74LS173 
 
-IC 74LS173 [^4] is a 16-pin dual in-line package(DIP IC) IC. It is a 4-bit D-type register, with 3-state outputs.
+IC 74LS173 is a 16-pin dual in-line package(DIP IC) IC. It is a 4-bit D-type register, with 3-state outputs.
 * Pin 1 and 2 are output enable pins. When both are low, the output is enabled and normal logic of D-registers appear. If any of them go high, the output is disabled and a high impedence state is present at output.
 * Pin 3,4,5 and 6 are output pins, where, Pin-3 is the LSB and Pin-6 is the MSB.
 * Pin 7 is the clock pin. IC 74LS173 recognises rising-edge of the clock pulse.
@@ -75,7 +75,7 @@ Pins 3,4,5 and 6 are given as inputs to IC 74157.
 
 ### IC 74LS157  
 
-IC 74LS157 [^5] is a 16-pin dual in-line package(DIP IC) IC. It is a Quad 2-line to 1-line data multiplexer.
+IC 74LS157 is a 16-pin dual in-line package(DIP IC) IC. It is a Quad 2-line to 1-line data multiplexer.
 * Pin 1 is the select pin. When low, it selects inputs I0 and when high, it selects inputs I1.
 * Pin 2,5,11 and 14 are input lines that get selected when select signal is a low.
 * Pin 3,6,10 and 13 are input lines that get selected when select signal is a high.
