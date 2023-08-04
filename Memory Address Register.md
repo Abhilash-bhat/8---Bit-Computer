@@ -52,7 +52,7 @@ When selected in this mode, the user can set 4-bit value to the MAR. Values are 
 
 #### Clock Mode
 
-After initialising the computer, the computer now goes into automatic mode, where the clock runs at some suitable frequency set by the user. For each clock pulse, instructions get executed to yield the final result of the computations. For fetching the instruction or data, the MAR is fed RAM location from **8-bit BUS** of the computer(4-bit MSB would have b0000). The Program Counter[^3] dumps value of the RAM location to the BUS which is fed into MAR. For each new instruction or data, the MAR points to 4-bit address of RAM locations.
+After initialising the computer, the computer now goes into automatic mode, where the clock runs at some suitable frequency set by the user. For each clock pulse, instructions get executed to yield the final result of the computations. For fetching the instruction or data, the MAR is fed RAM location from **8-bit BUS** of the computer(4-bit MSB would have b0000). The Program Counter[^5] dumps value of the RAM location to the BUS which is fed into MAR. For each new instruction or data, the MAR points to 4-bit address of RAM locations.
 
 (Note: In this mode, the DIP switches have no control over MAR value.) 
 
@@ -102,10 +102,10 @@ Pin 4,7,9 and 12 are given to RAM address inputs. A set of LEDs connected to the
 
 [^4]: [Ben Eater's Website](https://eater.net/8bit)
 
-[^2]: [Program Counter Module](https://github.com/Abhilash-bhat/EightBitComputer/blob/main/Program%20Counter.md)
+[^5]: [Program Counter Module](https://github.com/Abhilash-bhat/EightBitComputer/blob/main/Program%20Counter.md)
 
-[^3]: [Data Sheet 74LS173](https://eater.net/datasheets/74ls173.pdf)
+[^2]: [Data Sheet 74LS173](https://eater.net/datasheets/74ls173.pdf)
 
-[^5]: [Data Sheet 74LS157](https://eater.net/datasheets/74ls157.pdf)
+[^3]: [Data Sheet 74LS157](https://eater.net/datasheets/74ls157.pdf)
 
 * [Ben Eater's Channel](https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU)
