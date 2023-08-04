@@ -22,8 +22,8 @@ It is the basic block, through which data can be given to the computer for compu
  
 ## Components
 
-- **IC 74LS173**[^2] : 4-Bit D-type registers with 3-state Outputs.
-- **IC 74LS157**[^3] : Quad 2-line to 1-line data multiplexers/selectors.
+- **IC 74LS173** : 4-Bit D-type registers with 3-state Outputs.
+- **IC 74LS157** : Quad 2-line to 1-line data multiplexers/selectors.
 - **4-position DIP Switch**
 - **SPDT Switch**
 - **Resistors** : 4x 220 ohm (Note: Only to limit current across LEDs.)
@@ -33,7 +33,7 @@ It is the basic block, through which data can be given to the computer for compu
 
 ![MAR_Schematics](https://eater.net/schematics/mar.png)
 
-**Fig.** ***MAR Schematic*** *(designed on KiCAD, Credits: Ben Eater)*[^4]
+**Fig.** ***MAR Schematic*** *(designed on KiCAD, Credits: Ben Eater)*[^2]
 
 ## Insights
 
@@ -44,7 +44,7 @@ There **2** modes in which MAR works:
 - **Clock / Auto Mode**
 
 The modes are selected using a simple SPDT (Single Pole Double Throw) switch. Red LED indicates User mode, while Green LED indicates Clock mode.
-The 4 Yellow LED shows us the value in MAR. The value in MAR represents one of the 16 addresses of RAM[^1]. 
+The 4 Yellow LED shows us the value in MAR. The value in MAR represents one of the 16 addresses of RAM.
 
 #### User Mode
 
@@ -52,13 +52,13 @@ When selected in this mode, the user can set 4-bit value to the MAR. Values are 
 
 #### Clock Mode
 
-After initialising the computer, the computer now goes into automatic mode, where the clock runs at some suitable frequency set by the user. For each clock pulse, instructions get executed to yield the final result of the computations. For fetching the instruction or data, the MAR is fed RAM location from **8-bit BUS** of the computer(4-bit MSB would have b0000). The Program Counter[^5] dumps value of the RAM location to the BUS which is fed into MAR. For each new instruction or data, the MAR points to 4-bit address of RAM locations.
+After initialising the computer, the computer now goes into automatic mode, where the clock runs at some suitable frequency set by the user. For each clock pulse, instructions get executed to yield the final result of the computations. For fetching the instruction or data, the MAR is fed RAM location from **8-bit BUS** of the computer(4-bit MSB would have b0000). The Program Counter[^3] dumps value of the RAM location to the BUS which is fed into MAR. For each new instruction or data, the MAR points to 4-bit address of RAM locations.
 
 (Note: In this mode, the DIP switches have no control over MAR value.) 
 
 ### IC 74LS173  
 
-IC 74LS173[^2] is a 16-pin dual in-line package(DIP IC) IC. It is a 4-bit D-type register, with 3-state outputs.
+IC 74LS173[^4] is a 16-pin dual in-line package(DIP IC) IC. It is a 4-bit D-type register, with 3-state outputs.
 * Pin 1 and 2 are output enable pins. When both are low, the output is enabled and normal logic of D-registers appear. If any of them go high, the output is disabled and a high impedence state is present at output.
 * Pin 3,4,5 and 6 are output pins, where, Pin-3 is the LSB and Pin-6 is the MSB.
 * Pin 7 is the clock pin. IC 74LS173 recognises rising-edge of the clock pulse.
@@ -75,7 +75,7 @@ Pins 3,4,5 and 6 are given as inputs to IC 74157.
 
 ### IC 74LS157  
 
-IC 74LS173[^2] is a 16-pin dual in-line package(DIP IC) IC. It is a Quad 2-line to 1-line data multiplexer.
+IC 74LS173[^5] is a 16-pin dual in-line package(DIP IC) IC. It is a Quad 2-line to 1-line data multiplexer.
 * Pin 1 is the select pin. When low, it selects inputs I0 and when high, it selects inputs I1.
 * Pin 2,5,11 and 14 are input lines that get selected when select signal is a low.
 * Pin 3,6,10 and 13 are input lines that get selected when select signal is a high.
@@ -98,14 +98,14 @@ Pin 4,7,9 and 12 are given to RAM address inputs. A set of LEDs connected to the
 
 ## References
 
-[^1]: [need to be changed](#module-overview)
+[^1]: [RAM Module](https://github.com/Abhilash-bhat/EightBitComputer/blob/main/Random%20Access%20Memory.md)
 
-[^2]: [Data Sheet 74LS173](https://eater.net/datasheets/74ls173.pdf)
+[^5]: [Data Sheet 74LS173](https://eater.net/datasheets/74ls173.pdf)
 
-[^3]: [Data Sheet 74LS157](https://eater.net/datasheets/74ls157.pdf)
+[^4]: [Data Sheet 74LS157](https://eater.net/datasheets/74ls157.pdf)
 
-[^4]: [Ben Eater's Website](https://eater.net/)
+[^2]: [Ben Eater's Website](https://eater.net/8bit)
 
-[^5]: [need to be changed2](#module-overview)
+[^3]: [Program Counter Module](https://github.com/Abhilash-bhat/EightBitComputer/blob/main/Program%20Counter.md)
 
 * [Ben Eater's Channel](https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU)
