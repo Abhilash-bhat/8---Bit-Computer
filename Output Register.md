@@ -18,7 +18,7 @@
 
 ## Module Overview
 
-Similar to any register, the Output Register stores the binary value present on the bus and displays it on a 7segment LED display.Conversion from binary value to 7segment configuration is done by the rest of the circuits present in the Output Register module.
+Similar to any register, the Output Register stores the binary value present on the bus and displays it on a 7segment LED display.Conversion from binary value to 7segment configuration is done by the rest of the circuits present in the Output Register module. This module shows human readable form of the binary number,i.e. decimal number. The 4th display is used for displaying '-' sign for negative numbers.
 
 ## Components Used
 
@@ -28,7 +28,7 @@ Similar to any register, the Output Register stores the binary value present on 
 - **IC 74LS76** : Dual JK FlipFlop
 - **IC 74LS139** : Dual 2-to-4 line decoder/demultiplexer
 - **IC  74LS08** : Quad AND Gate
-- **Common Cathode 7 segment display** (CC_7segment x4)
+- **Common Cathode 7 segment display** (7segment_CC x4)
 - **SPDT Switch**
 - **Resistors** : 1k ohm, 100k ohm, 10k ohm
 - **Capacitors** : 0.01uF
@@ -43,15 +43,27 @@ Similar to any register, the Output Register stores the binary value present on 
 
 ### 555 Timer IC
 
+The 555 timer is configured in astable mode and has a differnt rate than that of the master clock. Its main purpose is to sequence through each of the 4 7segment displays. And hence the displays display decimal numbers in a sequence. This action is controlled by the rate at which the astable multivibrator oscillates.
+
 ### IC 74LS76
+
+IC 7476 is a dual JK FlipFlop. Cascading the two FlipFlops,  we obtain a 2-bit binary counter. The counting speed is determined by the square wave frequency of the astable multivibrator of Output Register module. This counter is used to address the 4 7segment displays. The counter is 2-bit and hence sequences through 4 unique sequence.
 
 ### IC 74LS139
 
+IC 74139 is a dual 2-to-4 line decoder. For the distict sequence produced by IC 7476 (JK FF-counter), this IC Outputs one of the 4 lines a Low (IC 74139 is an active LOW IC). A common cathode display requires an active LOW signal, which is provided by this IC.
+
 ### IC 74LS273
+
+IC 74273 is an 8-bit D register, which stores 8-bit binary value. Whenever ,there is a necessity to display decimal numbers, the binary value is pushed to the bus. In the subsequent clock cycle, the value from the bus ,gets stored into this D register. All the other circuits of this module converts this binary value to the decimal display.
 
 ### IC 74LS08
 
+IC 7408 is a quad AND gate. It is used as a gate ,for the entry of bus value into the D register.
+
 ### IC AT28C16
+
+IC 2816 is a 16k EEPROM (Electrically Erasable Programmable Read Only Memory). It contains 16k address locations in which data can be stored. Since it is a ROM, data is permanantly stored. i.e. unlike RAM, ROM doesn't loose the data when the power goes off. Its electrically erasable, and programmable, hence data in any address can be erased and reprogrammed with a new data.
 
 ## Working
 
